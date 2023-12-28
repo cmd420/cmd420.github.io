@@ -113,6 +113,12 @@ article h2, article h3 {
     gap: 1rem;
 }
 
+@media (max-width: 750px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project {
     overflow: hidden;
 
@@ -151,10 +157,6 @@ article h2, article h3 {
 footer {
     text-align: center;
     background-color: hsl(200, 10%, 15%);
-}
-
-.contacts {
-
 }
 
 .contact-method a {

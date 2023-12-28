@@ -135,7 +135,8 @@
                                 conceptualized and developed a personal assistant that learns and adapts to user
                                 preferences.
                                 From scheduling tasks to providing relevant recommendations, this AI-driven companion is
-                                designed to make life easier and more efficient. This project reflects my fascination with
+                                designed to make life easier and more efficient. This project reflects my fascination
+                                with
                                 the
                                 limitless possibilities that emerge when code meets cognitive capabilities.
                             </p>
@@ -147,10 +148,13 @@
                             <h3>
                                 EcoTracker: Navigating a Greener Tomorrow
                             </h3>
-                            <p>In response to the growing concern for environmental sustainability, I created EcoTracker, a
-                                web application that empowers users to monitor and reduce their carbon footprint. Through
+                            <p>In response to the growing concern for environmental sustainability, I created
+                                EcoTracker, a
+                                web application that empowers users to monitor and reduce their carbon footprint.
+                                Through
                                 intuitive data visualization, users can track their daily activities and receive
-                                personalized tips to minimize their environmental impact. EcoTracker embodies my belief that
+                                personalized tips to minimize their environmental impact. EcoTracker embodies my belief
+                                that
                                 technology can be a force for positive change, fostering awareness and encouraging
                                 responsible choices.
                             </p>
@@ -188,5 +192,23 @@
         </div>
     </footer>
 </body>
+<script>
+    function updateLinkColor() {
+        const currentlyViewing = window.location.hash;
+        if (currentlyViewing) {
+            const currentLink = document.querySelector(`.links-container a[href="${currentlyViewing}"]`);
+            const otherLinks = document.querySelectorAll(`.links-container a:not(a[href="${currentlyViewing}"])`)
+            currentLink.classList.add('green-glow');
+            currentLink.classList.remove('glow');
+            otherLinks.forEach(l => {
+                l.classList.remove('green-glow');
+                l.classList.add('glow');
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', updateLinkColor);
+    window.addEventListener('hashchange', updateLinkColor);
+</script>
 
 </html>
