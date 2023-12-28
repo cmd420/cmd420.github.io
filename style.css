@@ -184,7 +184,7 @@ article h2, article h3 {
 .project img {
     aspect-ratio: 2 / 1;
     max-height: 300px;
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
     transition: 100ms ease-out;
 }
