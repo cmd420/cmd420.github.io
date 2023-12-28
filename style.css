@@ -116,6 +116,47 @@ article h2, article h3 {
     transition: 1s;
 }
 
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+@media (max-width: 505px) {
+    .technologies {
+        flex-direction: column;
+    }
+}
+
+.technology-category {
+    padding-inline: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.technology {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    background-color: #333;
+    width: 1fr;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.technology img {
+    aspect-ratio: 1 / 1;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+.technology p {
+    margin: 0;
+}
+
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
