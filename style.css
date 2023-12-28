@@ -141,20 +141,22 @@ article h2, article h3 {
     gap: 1rem;
     align-items: center;
 
-    background-color: #333;
     width: 1fr;
     padding: 1rem;
     border-radius: 16px;
+    background-color: #333;
+
+    transition: 230ms ease-out;
+}
+
+.technology:hover {
+    transform: scale(1.1);
 }
 
 .technology img {
     aspect-ratio: 1 / 1;
     max-height: 75px;
     object-fit: contain;
-}
-
-.technology p {
-    margin: 0;
 }
 
 .projects {
