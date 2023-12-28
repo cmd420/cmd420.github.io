@@ -16,18 +16,11 @@ function updateLinkColor() {
     }
 }
 
-var animDir = 'rtl';
 function handleParagraphIntersection(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            if (animDir === 'rtl') {
-                entry.target.style.animation = 'slideInRTL 1s ease-in-out forwards';
-                animDir = 'ltr';
-            } else {
-                entry.target.style.animation = 'slideInLTR 1s ease-in-out forwards';
-                animDir = 'rtl';
-            }
+            entry.target.style.animation = 'slideInLTR 1s ease-in-out forwards';
 
             observer.unobserve(entry.target);
         }
