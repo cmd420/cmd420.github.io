@@ -20,7 +20,7 @@ function handleParagraphIntersection(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            entry.target.style.animation = 'slideInLTR 1s ease-in-out forwards';
+            entry.target.style.animation = 'slide-in-ltr 1s ease-in-out forwards';
 
             observer.unobserve(entry.target);
         }
