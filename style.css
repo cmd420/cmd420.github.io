@@ -84,7 +84,7 @@ main {
 
 .intro {
     opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 1.5s ease-in-out forwards;
 
 	user-select: none;
 	height: 100vh;
