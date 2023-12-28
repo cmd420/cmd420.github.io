@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
             </div>
         </div>
         <article>
-            <section>
+            <section id="about-me-section">
                 <h2 id="about">About Me</h2>
                 <div>
                     <p>
@@ -94,7 +95,7 @@
                 <h2 id="work">Work</h2>
                 <div class="projects">
                     <div class="project">
-                        <img src="https://place-hold.it/500x500" alt="img">
+                        <img src="/nut-master.jpg" alt="img">
                         <div class="project-description">
                             <h3>PixelCraft: Unleashing Creativity Through Code</h3>
                             <p>
@@ -109,7 +110,7 @@
                         </div>
                     </div>
                     <div class="project">
-                        <img src="https://place-hold.it/500x500" alt="img">
+                        <img src="/nut-master.jpg" alt="img">
                         <div class="project-description">
                             <h3>
                                 CodeChef Companion: Empowering Coders Everywhere
@@ -125,7 +126,7 @@
                         </div>
                     </div>
                     <div class="project">
-                        <img src="https://place-hold.it/500x500" alt="img">
+                        <img src="/nut-master.jpg" alt="img">
                         <div class="project-description">
                             <h3>
                                 AI-driven Personal Assistant: Your Virtual Sidekick
@@ -143,7 +144,7 @@
                         </div>
                     </div>
                     <div class="project">
-                        <img src="https://place-hold.it/500x500" alt="img">
+                        <img src="/nut-master.jpg" alt="img">
                         <div class="project-description">
                             <h3>
                                 EcoTracker: Navigating a Greener Tomorrow
@@ -177,6 +178,9 @@
                         <a href="">Phone↗︎</a>
                     </div>
                     <div class="contact-method">
+                        <a href="">WhatsApp↗︎</a>
+                    </div>
+                    <div class="contact-method">
                         <a href="">Discord↗︎</a>
                     </div>
                 </div>
@@ -192,23 +196,4 @@
         </div>
     </footer>
 </body>
-<script>
-    function updateLinkColor() {
-        const currentlyViewing = window.location.hash;
-        if (currentlyViewing) {
-            const currentLink = document.querySelector(`.links-container a[href="${currentlyViewing}"]`);
-            const otherLinks = document.querySelectorAll(`.links-container a:not(a[href="${currentlyViewing}"])`)
-            currentLink.classList.add('green-glow');
-            currentLink.classList.remove('glow');
-            otherLinks.forEach(l => {
-                l.classList.remove('green-glow');
-                l.classList.add('glow');
-            });
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', updateLinkColor);
-    window.addEventListener('hashchange', updateLinkColor);
-</script>
-
 </html>
